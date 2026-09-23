@@ -10,6 +10,10 @@ Economics researcher at The Hong Kong Polytechnic University and the University 
 | **[Calorie tracker](https://github.com/jackieyangjq/caltrk)** · [live](https://jackieyangjq.github.io/caltrk/) | Single-file offline-first web app with vision-model food recognition, arithmetic cross-checks on model output, and weekly calibration of the energy model against real weight data. 24 releases in six weeks. |
 | **Filings Q&A research agent** (in progress, October–November 2026) | Retrieval over SEC filings with cited answers, a tool-using agent for compound questions, and an evaluation set comparing keyword, embedding, and hybrid retrieval. |
 
+## Open source
+
+- [ClaudeCodeUsage](https://github.com/ClaudeCodeUsage/ClaudeCodeUsage) (VS Code extension, TypeScript): [#115](https://github.com/ClaudeCodeUsage/ClaudeCodeUsage/pull/115) memoised the dashboard date-label formatter (fixes #99), merged September 2026.
+
 ## Now
 
 - Building a filings Q&A research agent: retrieval over SEC filings with cited answers, plus an evaluation set (October–November 2026).
