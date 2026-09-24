@@ -10,16 +10,18 @@
 |---|---|
 | **[finfluencer-digest](https://github.com/jackieyangjq/finfluencer-digest)** | 每天早上，Gemini 看 16 个 YouTube 财经频道和一批 X（原推特）账号，提取结构化的个股观点，汇总共识和分歧，再发一封摘要邮件。一个模型出错就自动换备用模型；用 GitHub Actions（GitHub 自带的自动化服务）定时运行，并加了一道检查，防止定时触发被漏掉；新闻都核对过来源，防止编造引用。用 Python 写成；有 27 个离线测试（不联网也能跑）、CI（每次提交代码都自动跑测试），以及不填密钥也能运行的演示模式。 |
 | **[热量记录](https://github.com/jackieyangjq/caltrk)** · [在线使用](https://jackieyangjq.github.io/caltrk/) | 单文件、离线优先（不联网也能用）的网页应用：用视觉模型（能看懂图片的 AI 模型）识别食物，对模型输出做算术交叉验证（用算术把几个数互相核对），每周用真实体重数据校准热量收支模型。六周发布了 24 个版本。 |
-| **财报问答研究助手**（进行中，2026 年 10–11 月） | 在 SEC 披露文件（美国上市公司交给美国证监会的年报、季报等）里检索，回答附带出处；用一个会调用工具的智能体（能自己决定下一步做什么的 AI 程序）处理要分几步才能回答的复合问题；再用一套评测集（带标准答案的测试题）比较关键词检索、向量检索（按语义相近程度查找）和两者结合的混合检索。 |
+| **[filings-qa-agent](https://github.com/jackieyangjq/filings-qa-agent)**（财报问答研究助手） | 在 SEC 披露文件（美国上市公司交给美国证监会的年报、季报）里检索并回答，每句话都带可核对的出处（引用了没给模型看过的段落的句子整句删掉）；一个会调用工具、每步留轨迹的研究智能体（能自己决定下一步做什么的 AI 程序）；一套 50 题的评测，比较关键词检索、向量检索（按语义相近程度查找）和混合检索：关键词答对 95%，混合 90%，向量 70%，30 组不可答题全部正确弃答。用 SQLite 的全文索引加 numpy 代替向量数据库；168 个离线测试、CI、离线演示。 |
+| **[catfolio fork](https://github.com/jackieyangjq/catfolio)**（投资面板） | 一个本地优先的投资组合面板（上游 irrwood/catfolio，MIT 许可），我加了长桥券商账户同步和一个“观点记分牌”工作区：导入任何来源的个股看多看空观点，按之后的价格走势评分，给每个来源画“每次都跟”的净值曲线和逐月命中率。四个 PR 已提交到上游。 |
 
 ## 开源贡献
 
 - [ClaudeCodeUsage](https://github.com/ClaudeCodeUsage/ClaudeCodeUsage)（VS Code 编辑器的扩展，TypeScript 编写）：[#115](https://github.com/ClaudeCodeUsage/ClaudeCodeUsage/pull/115) 给仪表盘的日期标签格式化函数加了缓存（同样的输入只算一次），修复了 #99，2026 年 9 月合并。
+- [catfolio](https://github.com/irrwood/catfolio)（FastAPI 写的投资组合面板，Python）：[#4](https://github.com/irrwood/catfolio/pull/4) 港股代码补零与港币汇率、[#5](https://github.com/irrwood/catfolio/pull/5) 清理失效链接、[#6](https://github.com/irrwood/catfolio/pull/6) 长桥账户同步、[#7](https://github.com/irrwood/catfolio/pull/7) 观点记分牌工作区；2026 年 9 月提交。
 
 ## 最近在做
 
-- 在做财报问答研究助手：在 SEC 披露文件里检索，给出带出处的回答，外加一套评测集（2026 年 10–11 月）。
-- 在积累财经博主的个股观点，用来对照市场表现，给他们的命中率打分。结果 2026 年 11 月出来。
+- 在扩展 catfolio：长桥同步和观点记分牌已在 fork 里上线，四个 PR 等上游审阅（2026 年 9 月）。
+- 财经博主的个股观点正在记分牌里逐步到期：最早的 5 日结果 2026 年 9 月底出来，63 日结果 12 月出来。
 
 ## 联系方式
 

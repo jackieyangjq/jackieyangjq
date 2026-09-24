@@ -10,16 +10,18 @@ Economics researcher at The Hong Kong Polytechnic University and the University 
 |---|---|
 | **[finfluencer-digest](https://github.com/jackieyangjq/finfluencer-digest)** | Every morning, Gemini watches 16 YouTube finance channels and a set of X accounts, extracts structured stock calls, aggregates consensus and disagreement, and emails a digest. Multi-model fallback, GitHub Actions scheduling with a gate against dropped cron triggers, and source-verified news to prevent fabricated citations. Python; 27 offline tests, CI, demo mode that runs without keys. |
 | **[Calorie tracker](https://github.com/jackieyangjq/caltrk)** · [live](https://jackieyangjq.github.io/caltrk/) | Single-file offline-first web app with vision-model food recognition, arithmetic cross-checks on model output, and weekly calibration of the energy model against real weight data. 24 releases in six weeks. |
-| **Filings Q&A research agent** (in progress, October–November 2026) | Retrieval over SEC filings with cited answers, a tool-using agent for compound questions, and an evaluation set comparing keyword, embedding, and hybrid retrieval. |
+| **[filings-qa-agent](https://github.com/jackieyangjq/filings-qa-agent)** | Question answering over SEC 10-K/10-Q filings with a checkable source on every sentence (sentences citing unseen passages are dropped), a traced tool-using research agent, and an evaluation of 50 questions comparing keyword, vector and hybrid retrieval (BM25 95% correct, hybrid 90%, vector 70%; all 30 unanswerable pairs declined). SQLite FTS5 and numpy instead of a vector database; 168 offline tests, CI, offline demo. |
+| **[catfolio fork](https://github.com/jackieyangjq/catfolio)** | A local-first portfolio dashboard (upstream: irrwood/catfolio, MIT) extended with Longbridge account sync and a call-tracker workspace that scores stock calls from any source against later prices, with a follow-every-call curve and monthly hit rates per source. Four pull requests open upstream. |
 
 ## Open source
 
 - [ClaudeCodeUsage](https://github.com/ClaudeCodeUsage/ClaudeCodeUsage) (VS Code extension, TypeScript): [#115](https://github.com/ClaudeCodeUsage/ClaudeCodeUsage/pull/115) memoised the dashboard date-label formatter (fixes #99), merged September 2026.
+- [catfolio](https://github.com/irrwood/catfolio) (FastAPI portfolio dashboard, Python): [#4](https://github.com/irrwood/catfolio/pull/4) HK symbol zero-padding and HKD FX, [#5](https://github.com/irrwood/catfolio/pull/5) dead links, [#6](https://github.com/irrwood/catfolio/pull/6) Longbridge account sync, [#7](https://github.com/irrwood/catfolio/pull/7) call-tracker workspace; opened September 2026.
 
 ## Now
 
-- Building a filings Q&A research agent: retrieval over SEC filings with cited answers, plus an evaluation set (October–November 2026).
-- Accumulating influencer stock calls to score their hit rate against the market. Results in November 2026.
+- Extending catfolio: Longbridge sync and the call tracker are in the fork, with pull requests open upstream (September 2026).
+- Scoring influencer stock calls in the call tracker as they mature: the first 5-day results land at the end of September 2026, the 63-day ones in December.
 
 ## Contact
 
