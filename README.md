@@ -1,5 +1,7 @@
 # Hi, I'm Jiaqi Yang
 
+**English** | [简体中文](README.zh-CN.md)
+
 Economics researcher at The Hong Kong Polytechnic University and the University of Surrey, building LLM-powered tools for investment research. I care about pipelines that run every day without me, and about measuring whether the model actually got it right.
 
 ## Projects
@@ -22,7 +24,3 @@ Economics researcher at The Hong Kong Polytechnic University and the University 
 ## Contact
 
 jiaqi.yang@surrey.ac.uk
-
----
-
-香港理工大学、萨里大学经济学方向研究者，在做用大模型辅助投资研究的工具：每天自动运行的多模态流水线、评测、智能体。
